@@ -1,0 +1,23 @@
+version: "2.0"
+
+rules:
+
+- rule: Saudar
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Se despedir
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Perguntar se o bot é um bot ou um humano
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Quando o bot não entender a mensagem do usuário
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase

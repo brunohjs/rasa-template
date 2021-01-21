@@ -1,0 +1,27 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Olá!"
+  - text: "Oi!"
+
+  utter_goodbye:
+  - text: "Até mais!"
+  - text: "Tchau!"
+
+  utter_iamabot:
+  - text: "Eu sou um bot, que legal!"
+
+  utter_please_rephrase:
+  - text: "Não entendi. Poderia repetir utilizando outras palavras?"
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
